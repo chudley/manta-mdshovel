@@ -554,7 +554,7 @@ function mdsCreateObject(mds, reqid, path, callback)
 	    'owner': 'e9c7b8f7-f51a-43ed-a159-f109da7d3162',
 	    'requestId': reqid,
 	    'roles': [],
-	    'type': 'directory',
+	    'type': 'object',
 	    '_etag': null,
 	    'contentLength': 0,
 	    'contentMD5': 'invalid-md5-sum',
