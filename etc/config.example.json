@@ -1,0 +1,10 @@
+{
+	"metadataService": {
+		"host": "10.99.99.43",
+		"port": 2020
+	},
+	"concurrency": 1,
+	"largeDirectory": "/shovel/big/a",
+	"smallDirectoryRoot": "/shovel/small/",
+	"artediPort": 1809
+}
