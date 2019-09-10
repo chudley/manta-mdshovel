@@ -302,7 +302,7 @@ function mdsShovelOperation(mds)
 {
 	var op, uuid;
 
-	uuid = mod_uuid.v4();
+	uuid = mds.mds_uuid_pfx + mod_uuid.v4().substr(mds.mds_uuid_pfx.length);
 	mod_assertplus.uuid(uuid);
 
 	op = {
@@ -326,6 +326,11 @@ function mdsShovelOperation(mds)
 	var path = mds.mds_path_small;
 
 	op.mp_pipeline = mod_vasync.waterfall([
+	    function mdsOpCreateLargeEntry(callback) {
+		var p = mod_path.join(mds.mds_path_large, uuid);
+		mdsCreateDirectory(mds, uuid, p, callback);
+	    },
+
 	    function mdsOpCreateSmallEntryOne(callback) {
 		path = mod_path.join(path, uuid.substr(0, 2));
 		mdsCreateDirectory(mds, uuid, path, callback);
