@@ -411,8 +411,7 @@ function mdsCreateDirectory(mds, reqid, path, callback)
 	    'owner': 'e9c7b8f7-f51a-43ed-a159-f109da7d3162',
 	    'requestId': reqid,
 	    'roles': [],
-	    'type': 'directory',
-	    '_etag': null
+	    'type': 'directory'
 	}, function (err) {
 		if (err && VError.hasCauseWithName(err, 'EtagConflictError')) {
 			err = null;
@@ -437,7 +436,6 @@ function mdsCreateObject(mds, reqid, path, callback)
 	    'requestId': reqid,
 	    'roles': [],
 	    'type': 'object',
-	    '_etag': null,
 	    'contentLength': 0,
 	    'contentMD5': 'invalid-md5-sum',
 	    'contentType': 'application/octet-stream',
