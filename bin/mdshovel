@@ -333,25 +333,21 @@ function mdsShovelOperation(mds)
 
 	    function mdsOpCreateSmallEntryTwo(callback) {
 		path = mod_path.join(path, uuid.substr(2, 2));
-		console.log(path);
 		mdsCreateDirectory(mds, uuid, path, callback);
 	    },
 
 	    function mdsOpCreateSmallEntryThree(callback) {
 		path = mod_path.join(path, uuid.substr(4, 2));
-		console.log(path);
 		mdsCreateDirectory(mds, uuid, path, callback);
 	    },
 
 	    function mdsOpCreateSmallEntryFour(callback) {
 		path = mod_path.join(path, uuid.substr(6, 2));
-		console.log(path);
 		mdsCreateDirectory(mds, uuid, path, callback);
 	    },
 
 	    function mdsOpCreateSmallEntryLeaf(callback) {
 		path = mod_path.join(path, uuid);
-		console.log(path);
 		mdsCreateObject(mds, uuid, path, callback);
 	    }
 	], function (err) {
